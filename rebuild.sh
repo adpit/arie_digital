@@ -2,6 +2,7 @@
 
 if [ -d "public" ]; then
   rm -rf public
+  echo "folder public sudah di hapus dan dibuat ulang"	
 fi
 
 hugo --minify
