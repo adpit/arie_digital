@@ -28,8 +28,7 @@ jobs:
         publish_dir: ./public
 
     - name: Setup Environment Variables
-      run: echo "REACT_APP_GITHUB_CLIENT_ID=${{ secrets.Client_ID }}" >> $GITHUB_ENV
-      run: echo "REACT_APP_GITHUB_CLIENT_SECRET=${{ secrets.Client_secret }}" >> $GITHUB_ENV
-
-
+      run: |
+        echo "REACT_APP_GITHUB_CLIENT_ID=${{ secrets.Client_ID }}" >> $GITHUB_ENV
+        echo "REACT_APP_GITHUB_CLIENT_SECRET=${{ secrets.Client_secret }}" >> $GITHUB_ENV
 
