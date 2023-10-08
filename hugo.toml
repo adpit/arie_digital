@@ -1,6 +1,6 @@
 baseURL = "https://adpit.github.io/arie_digital/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Arie Digital"
 theme = "ananke"
 
 [permalinks]
