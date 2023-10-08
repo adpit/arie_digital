@@ -1,6 +1,6 @@
 backend:
-  name: git-gateway
-  # name: github
+  # name: git-gateway
+  name: github
   repo: adpit/arie_digital # Gantikan dengan repo GitHub Anda
   base_url: https://api.netlify.com
   auth_endpoint: auth
