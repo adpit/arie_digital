@@ -1,6 +1,8 @@
 backend:
   name: github
-  repo: adpit/arie_digital  # Ubah sesuai dengan repo Anda
+  repo: adpit/arie_digital # Gantikan dengan repo GitHub Anda
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
   # branch: master    # Branch to update
   # base_url: https://adpit.github.io/arie_digital
 
@@ -14,4 +16,6 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+
+
 

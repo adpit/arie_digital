@@ -1,13 +1,11 @@
 #!/bin/bash
 
-if [ -d "public" ]; then
-  rm -rf public
-  echo "folder public sudah di hapus dan dibuat ulang"	
-fi
+rm -rf public
+echo "folder public sudah di hapus dan dibuat ulang"	
 
 hugo --minify
 
-git add .
+git add -A
 
 git commit -m "Rebuild site"
 
