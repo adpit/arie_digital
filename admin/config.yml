@@ -1,0 +1,13 @@
+backend:
+  name: github
+  repo: adpit/arie_digital # Gantikan dengan repo GitHub Anda
+media_folder: "static/images/uploads" 
+public_folder: "/images/uploads"
+collections:
+  - name: "posts" 
+    label: "Posts" 
+    folder: "content/posts" 
+    create: true 
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
