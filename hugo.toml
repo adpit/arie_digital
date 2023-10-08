@@ -1,15 +1,12 @@
 baseURL = "https://adpit.github.io/arie_digital/"
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+languageCode = "en-us"
+title = "My New Hugo Site"
 theme = "ananke"
 
-backend:
+[backend]
   name = "github"
   repo = "adpit/arie_digital"  # Ubah sesuai dengan repo Anda
   base_url = "https://api.netlify.com/auth/done"
 
 [permalinks]
   posts = "/:year/:month/:day/:slug"
-
-
-
