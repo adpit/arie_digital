@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: adpit/arie_digital  # Ubah sesuai dengan repo Anda
-  branch: master    # Branch to update
+  # branch: master    # Branch to update
   # base_url: https://adpit.github.io/arie_digital
 
 media_folder: "static/images/uploads" 
