@@ -1,7 +1,7 @@
 baseURL = "https://adpit.github.io/arie_digital/"
 languageCode = "en-us"
 title = "Arie Digital 2"
-theme = "ananke"
+theme = "hugo-theme-relearn"
 
 [permalinks]
   posts = "/:year/:month/:day/:slug"

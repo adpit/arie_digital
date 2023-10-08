@@ -1,9 +1,11 @@
 +++
-title = 'My First Post Judul Postingan'
-date = 2023-10-08T10:41:50+07:00
-draft = true
+title = "Judul Postingan"
+date = 2023-10-08
+draft = false
 description = "Deskripsi singkat"
-keywords = "kata kunci, SEO"
+keywords = ["kata", "kunci"]
 author = "Nama Anda"
-tags = ["Hugo", "SEO", "Tutorial"]
+tags = ["Hugo", "Tutorial"]
+categories = ["Web Development", "Hugo"]
+thumbnail = "images/thumbnail.jpg"
 +++
