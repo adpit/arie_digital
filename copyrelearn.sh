@@ -36,6 +36,8 @@ config_file="$webroot_dir/config/_default/config.toml"
 if [ -f "$config_file" ]; then
   $sed_command -i 's~baseURL = "https://example.com/"~baseURL = "https://adpit.github.io/arie_digital/"~' "$config_file"
   $sed_command -i 's~editURL = "https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/"~editURL = "https://github.com/adpit/arie_digital/edit/main/content/"~' "$config_file"
+  # Edit themesdir in Hugo configuration file using a different delimiter
+  $sed_command -i 's~themesdir = "../.."~themesdir = "themes"~' "$config_file"
   echo "Webroot files copied and configuration updated."
 else
   echo "Hugo configuration file not found. Make sure it exists in the project root."
