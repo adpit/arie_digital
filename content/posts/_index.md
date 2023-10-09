@@ -1,5 +1,6 @@
 +++
 title = "Blog"
+archetype = "Blog"
 description = "Deskripsi halaman beranda."
 +++
 
