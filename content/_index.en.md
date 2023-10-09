@@ -5,7 +5,6 @@ title = "Hugo Relearn Theme"
 
 A theme for [Hugo](https://gohugo.io/) designed for documentation.
 
-[★ What's new in the latest release ★]({{% relref "basics/migration" %}})
 
 ![Image of the Relearn theme in light and dark mode on phone, tablet and desktop](images/hero.png?width=100%&height=100%)
 
