@@ -8,5 +8,21 @@ name = "Beranda"
 url = "/"
 weight = 1
 
+[[menu.main]]
+  name = "Basics"
+  identifier = "basics"
+  url = "/basics/"
+  weight = 10
+[[menu.main]]
+  name = "Content"
+  parent = "basics"
+  url = "/basics/content/"
+  weight = 10
+[[menu.main]]
+  name = "Shortcodes"
+  parent = "basics"
+  url = "/basics/shortcodes/"
+  weight = 20
+
 [permalinks]
   posts = "/:year/:month/:day/:slug"
