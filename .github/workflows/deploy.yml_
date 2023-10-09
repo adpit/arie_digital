@@ -13,18 +13,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: Determine Changes
-      id: check_changes
-      run: |
-        # Mengecek apakah ada perubahan pada file .md
-        if git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -qE '\.md$'; then
-          echo "Changes detected in .md files, triggering deploy..."
-          echo "::set-output name=deploy::true"
-        else
-          echo "No changes in .md files, skipping deploy."
-          echo "::set-output name=deploy::false"
-        fi
-
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
       with:
@@ -48,7 +36,6 @@ jobs:
         fi
 
     - name: Deploy
-      if: steps.check_changes.outputs.deploy == 'true'
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GIT_TOKEN }}
@@ -58,4 +45,3 @@ jobs:
       run: |
         echo "REACT_APP_GITHUB_CLIENT_ID=${{ secrets.Client_ID }}" >> $GITHUB_ENV
         echo "REACT_APP_GITHUB_CLIENT_SECRET=${{ secrets.Client_secret }}" >> $GITHUB_ENV
-
