@@ -42,7 +42,7 @@ title = "Hugo Relearn Documentation"
   # chapters
   home = ["HTML", "RSS", "print", "SEARCH", "SEARCHPAGE"]
   section = ["HTML", "RSS", "print"]
-  page = ["HTML", "RSS", "print"]
+  page = ["HTML", "RSS"]
 
 [markup]
   [markup.highlight]
