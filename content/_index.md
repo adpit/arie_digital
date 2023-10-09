@@ -1,10 +1,8 @@
-```TOML
 +++
 title = "Halaman Depan banget!"
 archetype = "home"
 description = "Ini adalah halaman depan situs saya."
 +++
-```
 
 ## Alur Kerja DevOps 
 
