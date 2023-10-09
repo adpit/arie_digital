@@ -2,27 +2,29 @@ name: CommitWebSite
 on: push
 jobs:
   deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
-      - name: Git checkout
+      - name: Checkout
         uses: actions/checkout@v2
         with:
           submodules: true
           fetch-depth: 0
-      - name: Setup hugo
+      
+      - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: "0.68.3"
+          hugo-version: "0.119.0"
+          extended: true
+
       - name: Build
         run: hugo --minify
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.GIT_TOKEN }}
-          # external_repository: arie_digital/xyz.github.io
+          github_token: ${{ secrets.GIT_TOKEN }}
           publish_dir: ./public
-          keep_files: true
           user_name: adpit
           user_email: adpit31@gmail.com
           publish_branch: main
-          # cname: www.xyz.org1
+          keep_files: true
