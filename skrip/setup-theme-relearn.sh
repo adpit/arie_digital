@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Define target domain
+target_domain="https://adpit.github.io/arie_digital/"
+github_editURL="https://github.com/adpit/arie_digital/edit/main/content/"
+github_addURL="https://github.com/adpit/arie_digital/new/main/content"
+
 # Pindah ke direktori content dari direktori skrip saat ini
 cd ../
 
@@ -37,11 +42,11 @@ cp -Rf themes/hugo-theme-relearn/exampleSite/* "$webroot_dir"
 # Edit baseURL in Hugo configuration file using a different delimiter
 config_file="$webroot_dir/config/_default/config.toml"
 if [ -f "$config_file" ]; then
-  $sed_command -i 's~baseURL = "https://example.com/"~baseURL = "https://adpit.github.io/arie_digital/"~' "$config_file"
-  $sed_command -i 's~editURL = "https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/"~editURL = "https://github.com/adpit/arie_digital/edit/main/content/"~' "$config_file"
-  
+  $sed_command -i "s~baseURL = \"https://example.com/\"~baseURL = \"$target_domain\"~" "$config_file"
+  $sed_command -i "s~editURL = \"https://github.com/McShelby/hugo-theme-relearn/edit/main/exampleSite/content/\"~editURL = \"$github_editURL\"~" "$config_file"
+
   # Add a new line with the "Add Content" button right below "Edit this page"
-  $sed_command -i '/editURL/a addURL = "https://github.com/adpit/arie_digital/new/main/content"' "$config_file"
+  $sed_command -i "/editURL/a addURL = \"$github_addURL\"" "$config_file"
   
   echo "Webroot files copied and configuration updated."
 else

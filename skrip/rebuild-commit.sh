@@ -4,14 +4,17 @@ cd ../
 
 # Pesan informasi untuk pengguna
 echo "Gunakan skrip ini untuk membangun situs Hugo dan melakukan commit dengan pesan yang mungkin opsional."
-echo "Anda dapat memberikan pesan commit opsional sebagai argumen pertama atau biarkan kosong untuk menggunakan pesan default."
 
 # Pesan default untuk commit
 commit_message="Rebuild site"
 
-# Cek apakah ada argumen pesan commit
-if [ $# -eq 1 ]; then
-  commit_message="$1"
+# Beri waktu 10 detik untuk pengguna memasukkan pesan commit
+echo "Silakan masukkan pesan commit dalam 10 detik (jika dibiarkan kosong, pesan default akan digunakan):"
+read -t 10 user_commit_message
+
+# Jika pengguna memasukkan pesan, gunakan itu. Jika tidak, gunakan pesan default.
+if [ ! -z "$user_commit_message" ]; then
+  commit_message="$user_commit_message"
 fi
 
 # Hapus folder 'public' dan buat ulang
