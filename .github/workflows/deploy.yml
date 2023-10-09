@@ -16,7 +16,8 @@ jobs:
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
       with:
-        hugo-version: 'latest'
+        hugo-version: '0.119.0'
+        extended: true
 
     - name: Build
       run: hugo --minify
@@ -31,4 +32,3 @@ jobs:
       run: |
         echo "REACT_APP_GITHUB_CLIENT_ID=${{ secrets.Client_ID }}" >> $GITHUB_ENV
         echo "REACT_APP_GITHUB_CLIENT_SECRET=${{ secrets.Client_secret }}" >> $GITHUB_ENV
-

@@ -40,9 +40,9 @@ title = "Hugo Relearn Documentation"
   # for the search functionality
   # add print to home, section and page to activate the feature to print whole
   # chapters
-  home = ["HTML", "RSS"]
-  section = ["HTML", "RSS"]
-  page = ["HTML", "RSS"]
+  home = ["HTML", "RSS", "print", "SEARCH", "SEARCHPAGE"]
+  section = ["HTML", "RSS", "print"]
+  page = ["HTML", "RSS", "print"]
 
 [markup]
   [markup.highlight]
