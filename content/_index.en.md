@@ -1,10 +1,9 @@
-```TOML
 +++
 title = "Halaman Depan"
 archetype = "home"
 description = "Ini adalah halaman depan situs saya."
 +++
-```
+
 ## Alur Kerja DevOps
 
 ### Continuous Integration/Continuous Deployment (CI/CD)
@@ -37,5 +36,4 @@ jika ada error
 ```python
   File "/Users/admin/Desktop/devops/konvert/convertany.py", line 36
     elif para == "Autosimpan & Feedback Loop":
-```                                              
-```
+```           
