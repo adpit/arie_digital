@@ -20,7 +20,7 @@ jobs:
         extended: true
 
     - name: Show Hugo Configuration
-      run: cat config.toml
+      run: cat config/_default/config.toml
 
     - name: Build
       run: hugo --minify
