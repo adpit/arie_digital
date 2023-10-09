@@ -91,7 +91,7 @@ title = "Hugo Relearn Documentation"
     #contentDir = "content/en"
     [languages.en.params]
       landingPageName = "<i class='fas fa-home'></i> Home"
-      
+
   [languages.pir]
     title = "Cap'n Hugo Relearrrn Theme"
     weight = 2
@@ -138,21 +138,6 @@ title = "Hugo Relearn Documentation"
   [[module.mounts]]
     source = 'assets'
     target = 'assets'
-
-  # Language dependend settings:
-  # Use case https://gohugo.io/content-management/multilingual/#translation-by-filename
-  [[module.mounts]]
-    source = 'content'
-    target = 'content'
-  # Use case https://gohugo.io/content-management/multilingual/#translation-by-content-directory
-  #[[module.mounts]]
-  #  lang = 'en'
-  #  source = 'content/en'
-  #  target = 'content'
-  #[[module.mounts]]
-  #  lang = 'pir'
-  #  source = 'content/pir'
-  #  target = 'content'
 
   [[module.mounts]]
     source = 'data'
