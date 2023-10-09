@@ -35,20 +35,15 @@ defaultContentLanguage = "en"
 # the site's title of this showcase; you should change this ;-)
 title = "Hugo Relearn Documentation"
 
-[outputFormats]
-  [outputFormats.PRINT]
-    mediaType = "text/html"
-    isPlainText = false
-    isHTML = true
-    
 [outputs]
   # add JSON to the home to support Lunr search; This is a mandatory setting
   # for the search functionality
   # add print to home, section and page to activate the feature to print whole
   # chapters
-  home = ["HTML", "RSS", "print", "SEARCH", "SEARCHPAGE"]
-  section = ["HTML", "RSS", "print"]
-  page = ["HTML", "RSS", "print"]
+
+  home = [] #["HTML", "RSS", "print", "SEARCH", "SEARCHPAGE"]
+  section = [] #["HTML", "RSS", "print"]
+  page = [] #["HTML", "RSS", "print"]
 
 [markup]
   [markup.highlight]
