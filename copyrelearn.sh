@@ -46,6 +46,9 @@ else
   exit 1
 fi
 
+# Edit themesdir in Hugo configuration file using a different delimiter
+$sed_command -i 's~themesdir = "../.."~themesdir = "themes"~' "$config_file"
+
 single_html_path="$webroot_dir/layouts/_default/single.html"
 
 # Create layouts/_default directory if it doesn't exist
