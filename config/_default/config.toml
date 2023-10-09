@@ -210,7 +210,7 @@ title = "Hugo Relearn Documentation"
 # consult this documentation for explaination
 [params]
   editURL = "https://github.com/adpit/arie_digital/edit/main/content/"
-addURL = "https://github.com/adpit/arie_digital/new/main/content"
+  addURL = "https://github.com/adpit/arie_digital/new/main/content"
   description = "Documentation for Hugo Relearn Theme"
   author = "Sören Weber"
   showVisitedLinks = true
