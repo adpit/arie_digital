@@ -59,8 +59,17 @@ weight = 1
 " > "$content_path/_index.md"
   # Tanda akhir ```
   echo "Konten $content_name berhasil dibuat di topik $topic."
-# Tambahkan perubahan ke Git staging area
+
 cd ../
+
+# Hapus folder 'public' dan buat ulang
+rm -rf public
+echo "Folder public sudah dihapus dan dibuat ulang"
+
+# Jalankan Hugo untuk membangun situs dengan opsi minify
+hugo --minify
+
+# Tambahkan perubahan ke Git staging area
 git add -A
 
 # Lakukan commit dengan pesan yang mungkin telah disediakan
