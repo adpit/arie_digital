@@ -1,6 +1,6 @@
 +++
-title = "Beranda"
+title = "Blog"
 description = "Deskripsi halaman beranda."
 +++
 
-Selamat datang di website saya!
+Selamat datang di catatan praktis saya!
