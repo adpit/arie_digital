@@ -39,6 +39,7 @@ if [ -f "$config_file" ]; then
   # Edit themesdir in Hugo configuration file using a different delimiter
   $sed_command -i 's~themesdir = "../.."~themesdir = "themes"~' "$config_file"
   echo "Webroot files copied and configuration updated."
+
 else
   echo "Hugo configuration file not found. Make sure it exists in the project root."
   exit 1
