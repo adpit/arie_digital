@@ -45,3 +45,4 @@ done
 if [ "$commit_flag" = true ]; then
   git commit -m "Add templates for missing shortcodes"
 fi
+  
