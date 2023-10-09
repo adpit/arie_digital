@@ -63,7 +63,7 @@ if [ ! -f "$single_html_path" ]; then
   {{ .Content }}
   <!-- Tambahkan tombol Edit di sini -->
   <a href="{{ .Site.Params.editURL }}">Edit this page</a>
-  <a href="{{ site.Params.addURL }}" target="_blank">Add Content</a>
+  <a href="{{ .Site.Params.addURL }}" target="_blank">Add Content</a>
 </article>
 {{ end }}' > "$single_html_path"
 fi
