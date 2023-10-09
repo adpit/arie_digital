@@ -1,5 +1,11 @@
 name: CommitWebSite
-on: push
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**.md' # Hanya menjalankan CI/CD saat ada perubahan pada file .md di push ke branch main
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
