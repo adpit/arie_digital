@@ -26,11 +26,16 @@ create_topic() {
     fi
   else
     mkdir -p "$topic_path"
-    echo "+++
+    # Tanda awal ```TOML
+    echo "
+\`\`\`TOML
++++
 title = \"$topic_name\"
 weight = 1
 +++
+\`\`\`
 " > "$topic_path/_index.md"
+    # Tanda akhir ```
     echo "Topik $topic_name berhasil dibuat."
   fi
 }
@@ -43,13 +48,26 @@ create_content() {
 
   # Buat direktori dan file _index.md di dalamnya
   mkdir -p "$content_path"
-  echo "+++
+  # Tanda awal ```TOML
+  echo "
+\`\`\`TOML
++++
 title = \"$content_name\"
 weight = 1
 +++
+\`\`\`
 " > "$content_path/_index.md"
-
+  # Tanda akhir ```
   echo "Konten $content_name berhasil dibuat di topik $topic."
+# Tambahkan perubahan ke Git staging area
+cd ../
+git add -A
+
+# Lakukan commit dengan pesan yang mungkin telah disediakan
+git commit -m "Add Konten $content_name di topik $topic."
+
+# Push perubahan ke branch 'main'
+git push origin main
 }
 
 echo "Apa yang ingin Anda lakukan?"
