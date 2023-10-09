@@ -1,5 +1,6 @@
 +++
 title = "Halaman Depan"
+archetype = "home"
 description = "Ini adalah halaman depan situs saya."
 +++
 
