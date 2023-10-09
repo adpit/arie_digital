@@ -1,0 +1,10 @@
+<!-- layouts/_default/single.html -->
+{{ define "main" }}
+<article>
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+  <!-- Tambahkan tombol Edit di sini -->
+  <a href="{{ .Site.Params.editURL }}">Edit this page</a>
+</article>
+{{ end }}
+
