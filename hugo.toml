@@ -3,5 +3,10 @@ languageCode = "en-us"
 title = "Arie Digital 2"
 theme = "hugo-theme-relearn"
 
+[[menu.main]]
+name = "Beranda"
+url = "/"
+weight = 1
+
 [permalinks]
   posts = "/:year/:month/:day/:slug"
