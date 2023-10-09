@@ -19,6 +19,9 @@ jobs:
         hugo-version: '0.119.0'
         extended: true
 
+    - name: Show Hugo Configuration
+      run: cat config.toml
+
     - name: Build
       run: hugo --minify
 
