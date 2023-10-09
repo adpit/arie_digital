@@ -48,3 +48,23 @@ else
   echo "Hugo configuration file not found. Make sure it exists in the project root."
   exit 1
 fi
+
+single_html_path="$webroot_dir/layouts/_default/single.html"
+
+if [ ! -d "$webroot_dir/layouts/_default" ]; then
+  mkdir -p "$webroot_dir/layouts/_default"
+fi
+
+if [ ! -f "$single_html_path" ]; then
+  echo '<!-- layouts/_default/single.html -->
+{{ define "main" }}
+<article>
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+  <!-- Tambahkan tombol Edit di sini -->
+  <a href="{{ .Site.Params.editURL }}">Edit this page</a>
+  <a href="{{ site.Params.addURL }}" target="_blank">Add Content</a>
+</article>
+{{ end }}' > "$single_html_path"
+fi
+
