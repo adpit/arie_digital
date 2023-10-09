@@ -19,7 +19,7 @@ uglyURLs = false     # true -> basic/index.html -> basic.html
 
 # the directory where Hugo reads the themes from; this is specific to your
 # installation and most certainly needs be deleted or changed
-themesdir = "themes"
+themesdir = "../.."
 # yeah, well, obviously a mandatory setting for your site, if you want to
 # use this theme ;-)
 theme = "hugo-theme-relearn"
@@ -209,6 +209,7 @@ title = "Hugo Relearn Documentation"
 # settings specific to this theme's features; choose to your likings and
 # consult this documentation for explaination
 [params]
+  editURL = "https://github.com/adpit/arie_digital/edit/main/content/"
 addURL = "https://github.com/adpit/arie_digital/new/main/content"
   description = "Documentation for Hugo Relearn Theme"
   author = "Sören Weber"
