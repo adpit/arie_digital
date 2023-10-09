@@ -25,4 +25,4 @@ jobs:
           user_name: adpit
           user_email: adpit31@gmail.com
           publish_branch: main
-          # cname: www.xyz.org
+          # cname: www.xyz.org1
