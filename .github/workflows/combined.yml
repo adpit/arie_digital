@@ -1,0 +1,72 @@
+name: Combined CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-non-md:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name != 'push' || !contains(github.event.commits.*.added, '*.md') }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.119.0'
+          extended: true
+
+      - name: Show Hugo Configuration
+        run: cat config/_default/config.toml
+
+      - name: Build
+        run: |
+          hugo --minify 2>&1 | tee build.log
+          if [ ${PIPESTATUS[0]} -ne 0 ]; then
+            echo "::error::Hugo build failed, check build.log for details"
+          fi
+
+      - name: Display Warnings
+        run: |
+          if [ -f build.log ]; then
+            cat build.log | grep "WARNING" || true
+          fi
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GIT_TOKEN }}
+          publish_dir: ./public
+
+  deploy-md:
+    runs-on: ubuntu-latest
+    if: contains(github.event.commits.*.added, '*.md')
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "0.119.0"
+          extended: true
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GIT_TOKEN }}
+          publish_dir: ./public
+          user_name: adpit
+          user_email: adpit31@gmail.com
+          publish_branch: gh-pages
+          keep_files: true
+

@@ -174,7 +174,7 @@ title = "Hugo Relearn Documentation"
   disableLandingPageButton = true
   breadcrumbSeparator = ">"
   titleSeparator = "::"
-  themeVariant = [ "auto", "relearn-bright", "relearn-light", "relearn-dark", "zen-light", "zen-dark", "neon", "learn", "blue", "green", "red" ]
+  themeVariant = [ "relearn-dark","auto", "relearn-bright", "relearn-light", "zen-light", "zen-dark", "neon", "learn", "blue", "green", "red" ]
   themeVariantAuto = [ "relearn-dark" ]
   disableSeoHiddenPages = true
   # this is to index search for your native language in other languages, too (eg.
