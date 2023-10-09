@@ -1,36 +1,38 @@
 name: CommitWebSite
+
 on:
   push:
     branches:
       - main
-    paths:
-      - '**.md' # Hanya menjalankan CI/CD saat ada perubahan pada file .md di push ke branch main
+    paths: 
+      - '**.md' # Tetap fokus pada perubahan file .md saja
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          submodules: true
-          fetch-depth: 0
-      
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: "0.119.0"
-          extended: true
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        submodules: true
+        fetch-depth: 0
 
-      - name: Build
-        run: hugo --minify
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: '0.119.0'
+        extended: true
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GIT_TOKEN }}
-          publish_dir: ./public
-          user_name: adpit
-          user_email: adpit31@gmail.com
-          publish_branch: gh-pages # Perubahan dilakukan di sini, mengganti "main" menjadi "gh-pages"
-          keep_files: true
+    - name: Build
+      run: hugo --minify
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GIT_TOKEN }}
+        publish_dir: ./public
+        user_name: adpit
+        user_email: adpit31@gmail.com
+        publish_branch: gh-pages
+        keep_files: true

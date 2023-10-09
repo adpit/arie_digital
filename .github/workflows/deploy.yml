@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths-ignore: # Menambahkan ini untuk mengabaikan perubahan pada file .md
+      - '**.md'
 
 jobs:
   deploy:
@@ -36,13 +38,7 @@ jobs:
         fi
 
     - name: Deploy
-      if: ${{ github.event_name != 'push' || !contains(github.event.commits.*.added, '*.md') }}
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GIT_TOKEN }}
         publish_dir: ./public
-
-    - name: Setup Environment Variables
-      run: |
-        echo "REACT_APP_GITHUB_CLIENT_ID=${{ secrets.Client_ID }}" >> $GITHUB_ENV
-        echo "REACT_APP_GITHUB_CLIENT_SECRET=${{ secrets.Client_secret }}" >> $GITHUB_ENV
