@@ -36,6 +36,7 @@ jobs:
         fi
 
     - name: Deploy
+      if: ${{ github.event_name != 'push' || !contains(github.event.commits.*.added, '*.md') }}
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GIT_TOKEN }}
