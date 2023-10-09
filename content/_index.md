@@ -1,6 +1,6 @@
 ```TOML
 +++
-title = "Halaman Depan"
+title = "Halaman Depan banget!"
 archetype = "home"
 description = "Ini adalah halaman depan situs saya."
 +++
