@@ -4,7 +4,7 @@ archetype = "home"
 description = "Ini adalah halaman depan situs saya."
 +++
 
-## Alur Kerja DevOps 
+## Alur Kerja DevOps
 
 ### Continuous Integration/Continuous Deployment (CI/CD)
 
