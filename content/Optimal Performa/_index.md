@@ -1,13 +1,8 @@
 +++
-title = "Optimal Performa"
-weight = 1
-+++
-
----
 title: "Optimasi Website Klien: Fokus pada WordPress"
 date: 2023-10-12
-draft: false
----
+weight = 1
++++
 
 ## Optimasi Website Klien, Fokus pada WordPress
 
