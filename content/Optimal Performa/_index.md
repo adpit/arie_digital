@@ -1,5 +1,5 @@
 +++
-title = "Optimasi Website Klien: Fokus pada WordPress"
+title = "Optimasi Website"
 date = 2023-10-12
 weight = 1
 +++
