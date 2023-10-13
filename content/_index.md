@@ -1,14 +1,14 @@
 +++
-title = "Halaman Depan banget!"
+title = "Home"
 archetype = "home"
-description = "Ini adalah halaman depan situs saya."
+description = "Selamat Datang Silakan Lihat-Lihat"
 +++
 
-## Alur Kerja DevOps
+## Web ini gunakan Alur Kerja DevOps
 
 ### Continuous Integration/Continuous Deployment (CI/CD)
 
-Kami menggunakan GitHub Actions untuk memastikan bahwa setiap perubahan diuji dan diterapkan secara otomatis. Berikut ini adalah langkah-langkah dalam pipeline CI/CD kami:
+Saya menggunakan GitHub Actions untuk memastikan bahwa setiap perubahan diuji dan diterapkan secara otomatis. Berikut ini adalah langkah-langkah dalam pipeline CI/CD Web ini:
 
 1. **Checkout**: Mengambil versi terbaru dari kode sumber.
 2. **Setup Hugo**: Menginstal versi Hugo yang diperlukan.
@@ -20,7 +20,7 @@ Kami menggunakan GitHub Actions untuk memastikan bahwa setiap perubahan diuji da
 
 Pipeline ini akan otomatis dijalankan setiap kali ada perubahan di `branch` main.
 
-### Skrip Manajemen Situs
+### Jug ada beberapa skrip Manajemen Hugo
 
 - `add_konten.sh`: Menambahkan konten baru ke situs.
 - `check_ci_cd.sh`: Memeriksa status CI/CD.
@@ -30,7 +30,7 @@ Pipeline ini akan otomatis dijalankan setiap kali ada perubahan di `branch` main
 
 Setiap skrip ini mempermudah manajemen situs dan memastikan bahwa semua proses berjalan lancar.
 
-# Cara Pakai Git pada Praktek
+# Praktek Gratis Cara Pakai Git
 
 Anda ingin merestorasi (mengembalikan) repo Anda ke kondisi 4 jam yang lalu. Anda telah mencari dan menemukan commit ID yang spesifik (`e92746dcbadf870ee6449f02f7347751b8c9a3e8`) untuk digunakan sebagai titik restorasi.
 
@@ -97,10 +97,10 @@ Jika ini adalah proyek bersama, pastikan untuk memberi tahu tim Anda tentang per
 Jika Anda menggunakan pipeline CI/CD, pastikan untuk memeriksa apakah semua proses masih berjalan dengan lancar setelah merestorasi repo.
 
 
-### NOTE
-- subl -> View -> identation -> convert identation to space/tab 
-jika ada error
+### Debug
+jika ada error 
 ```python
   File "/Users/admin/Desktop/devops/konvert/convertany.py", line 36
     elif para == "Autosimpan & Feedback Loop":
 ```           
+umumnya karena ada kelebihan spasi atau tab jadi cara fixnya ke subl -> View -> identation -> convert identation to space/tab 
